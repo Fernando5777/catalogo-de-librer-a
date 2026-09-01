@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Librería</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Catálogo de Librería</h1>
+    </header>
+
+    <main>
+      <section class="search-section">
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Buscar por título, autor o categoría"
+          aria-label="Buscar libros"
+        />
+      </section>
+
+      <section class="catalog-section">
+        <h2>Libros disponibles</h2>
+        <div id="book-list" class="book-list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; Catálogo de Librería.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

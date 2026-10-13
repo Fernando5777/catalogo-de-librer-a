@@ -38,3 +38,10 @@ Proyecto académico — Buenas prácticas de desarrollo de software
 
 
 
+## Despliegue en AWS
+
+| Integrante | URL del sitio | Bucket público | Bucket privado |
+|---|---|---|---|
+| Luis Nieves | https://cuc-bq-eq6-nieves-sitio-2026.s3.us-east-1.amazonaws.com/index.html | cuc-bq-eq6-nieves-sitio-2026 | cuc-bq-eq6-nieves-privado-2026 |
+
+El sitio se migró de Netlify a Amazon S3 para alojar sus archivos estáticos. El bucket público sirve el sitio y el bucket privado se reserva para archivos que no deben ser accesibles públicamente.

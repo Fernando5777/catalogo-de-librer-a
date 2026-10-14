@@ -55,7 +55,6 @@ Despliegue en AWS
 
 El sitio se migró de Netlify a Amazon S3 para poder alojar sus archivos estáticos. El bucket público sirve el sitio y el bucket privado se reserva para archivos que no deben ser accesibles públicamente.
 
-| Jorge Andrés Sánchez | http://cuc-bp.eq06-sanchez-sitio-2026.s3-website-us-east-1.amazonaws.com | cuc-bp.eq06-sanchez-sitio-2026 | cuc-bp.eq06-sanchez-privado-2026 |
 
 | Integrante | URL del sitio | Bucket publico | Bucket privado |
 |---|---|---|---|

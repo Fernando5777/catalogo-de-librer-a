@@ -1,7 +1,17 @@
-function Boton({ children, alHacerClic }) {
+
+function Boton({
+  children,
+  alHacerClic,
+  variante = 'primario',
+  cargando = false
+}) {
   return (
-    <button type="button" onClick={alHacerClic}>
-      {children}
+    <button
+      className={`boton boton--${variante}`}
+      onClick={alHacerClic}
+      disabled={cargando}
+    >
+      {cargando ? 'Procesando...' : children}
     </button>
   );
 }

@@ -1,7 +1,4 @@
-// Reglas del negocio del catalogo. Esta capa NO conoce HTTP: no menciona req ni res.
 
-// Con 3 unidades o menos se avisa "poco stock" para reponer a tiempo.
-// Si cambia el criterio de la libreria, cambia aqui y en ninguna otra parte.
 export const STOCK_BAJO = 3;
 export const ANIO_MINIMO = 1000;
 export const PRECIO_MINIMO = 1;
@@ -33,7 +30,7 @@ export function validarLibro({ titulo, autor, anio, precio, stock } = {}) {
   }
 
   const precioNum = Number(precio);
-  if (Number.isNaN(precioNum) || precioNum < PRECIO_MINIMO) {
+  if (!Number.isFinite(precioNum) || precioNum < PRECIO_MINIMO) {
     return { valido: false, error: `El precio debe ser un numero mayor o igual a ${PRECIO_MINIMO}` };
   }
 

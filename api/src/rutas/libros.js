@@ -1,4 +1,4 @@
-// Solo recibe y responde. Las reglas viven en logica/.
+
 import { Router } from 'express';
 import { listar, agregar } from '../datos/repositorio.js';
 import { estadoDeStock, calcularValorInventario, validarLibro, ESTADO_AGOTADO } from '../logica/reglas-libros.js';
@@ -6,7 +6,7 @@ import { responder } from '../utilidades/http.js';
 
 const router = Router();
 
-// El back calcula el estado del stock: el front solo lo muestra (DRY entre front y back).
+
 const conEstado = (libro) => ({ ...libro, estado: estadoDeStock(libro.stock) });
 
 router.get('/', (req, res) => {

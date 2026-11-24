@@ -1,4 +1,4 @@
-// De donde salen y donde se guardan los datos (en memoria para el proyecto).
+
 let libros = [
   { id: 1, titulo: 'Cien años de soledad', autor: 'Gabriel García Márquez', anio: 1967, genero: 'Realismo mágico', precio: 59000, stock: 8 },
   { id: 2, titulo: 'El coronel no tiene quien le escriba', autor: 'Gabriel García Márquez', anio: 1961, genero: 'Novela corta', precio: 32000, stock: 3 },

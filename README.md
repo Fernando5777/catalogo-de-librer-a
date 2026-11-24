@@ -36,6 +36,17 @@ Actividades principales
 
 Proyecto académico — Buenas prácticas de desarrollo de software
 
+## Ejecutar la API
+
+Desde la raíz del proyecto, ejecuta:
+
+```bash
+cd api
+npm install
+npm run dev
+```
+
+La API quedará disponible en `http://localhost:3000`. Para comprobar que está activa, visita `http://localhost:3000/salud`.
 
 
 ## Despliegue en AWS

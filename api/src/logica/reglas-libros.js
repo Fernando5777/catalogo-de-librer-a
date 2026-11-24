@@ -30,7 +30,7 @@ export function validarLibro({ titulo, autor, anio, precio, stock } = {}) {
   }
 
   const precioNum = Number(precio);
-  if (Number.isNaN(precioNum) || precioNum < PRECIO_MINIMO) {
+  if (!Number.isFinite(precioNum) || precioNum < PRECIO_MINIMO) {
     return { valido: false, error: `El precio debe ser un numero mayor o igual a ${PRECIO_MINIMO}` };
   }
 

@@ -1,0 +1,407 @@
+
+:root {
+  font-family: 'Segoe UI', sans-serif;
+  color: #26352d;
+  background: #f7f5ef;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  font-size: 36px;
+}
+
+.brand h1 {
+  font-size: 19px;
+  margin: 0;
+}
+
+.brand p {
+  color: #8b795e;
+  margin: 4px 0 0;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  color: #35483b;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #b4773d;
+}
+
+.hero {
+  background: #294b3b;
+  color: white;
+  padding: 90px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero > div:first-child {
+  max-width: 650px;
+}
+
+.eyebrow {
+  color: #d6ae78;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.15;
+  margin: 20px 0;
+}
+
+.hero p {
+  color: #e0e8e0;
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 550px;
+}
+
+.primary-button {
+  display: inline-block;
+  background: #d5a66d;
+  color: #26352d;
+  padding: 14px 24px;
+  border-radius: 7px;
+  font-weight: bold;
+  margin-top: 18px;
+}
+
+.primary-button:hover {
+  background: #e6bd8b;
+}
+
+.hero-decoration {
+  font-size: 140px;
+}
+
+.inventory {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 35px 8%;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px #26352d0d;
+}
+
+.stat-card span {
+  display: block;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.stat-card strong {
+  font-size: 28px;
+  color: #294b3b;
+}
+
+.catalog {
+  padding: 45px 8% 80px;
+}
+
+.section-heading h2 {
+  font-family: Georgia, serif;
+  font-size: 36px;
+  margin-top: 10px;
+}
+
+.search-box {
+  margin: 25px 0;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #ddd8cd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.empty-state {
+  background: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 12px;
+}
+
+.empty-state span {
+  font-size: 55px;
+}
+
+.empty-state h3 {
+  font-family: Georgia, serif;
+  font-size: 25px;
+}
+
+.empty-state p {
+  color: #777;
+}
+
+footer {
+  background: #203b2e;
+  color: white;
+  text-align: center;
+  padding: 28px;
+}
+
+footer p {
+  font-weight: bold;
+}
+
+footer span {
+  color: #d6ae78;
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 60px 8%;
+  }
+
+  .hero-decoration {
+    display: none;
+  }
+
+  .inventory {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
+  .inventory {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cuadrícula del catálogo */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+/* Tarjeta individual */
+.book-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(38, 53, 45, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(38, 53, 45, 0.14);
+}
+
+.book-cover {
+  min-height: 150px;
+  display: grid;
+  place-items: center;
+  background: #e9e5d9;
+  font-size: 65px;
+}
+
+.book-info {
+  padding: 22px;
+}
+
+.book-info h3 {
+  color: #294b3b;
+  font-family: Georgia, serif;
+  font-size: 21px;
+  margin: 16px 0 8px;
+}
+
+.book-info p {
+  color: #777;
+  line-height: 1.5;
+}
+
+.book-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  padding-top: 15px;
+  border-top: 1px solid #eee9df;
+}
+
+.book-details strong {
+  color: #294b3b;
+}
+
+/* Etiquetas de disponibilidad */
+.book-status {
+  display: inline-block;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.book-status.disponible {
+  background: #e1f3e6;
+  color: #24713b;
+}
+
+.book-status.agotado {
+  background: #fbe5e3;
+  color: #a33129;
+}
+
+.book-status.poco.stock {
+  background: #fff0d6;
+  color: #946018;
+}
+
+/* Adaptación a pantallas pequeñas */
+@media (max-width: 900px) {
+  .book-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Formulario para agregar libros */
+.form-section {
+  padding: 50px 8% 80px;
+  background: #eeeae0;
+}
+
+.form-section .section-heading {
+  margin-bottom: 28px;
+}
+
+.form-section .section-heading p {
+  color: #777;
+  margin-top: 10px;
+}
+
+.book-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  box-shadow: 0 5px 20px rgba(38, 53, 45, 0.07);
+}
+
+.book-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: #294b3b;
+  font-weight: 600;
+}
+
+.book-form input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ddd8cd;
+  border-radius: 7px;
+  color: #26352d;
+  background: #fff;
+}
+
+.book-form input:focus {
+  outline: 2px solid #d5a66d;
+  border-color: #d5a66d;
+}
+
+.book-form button {
+  cursor: pointer;
+  border: none;
+  justify-self: start;
+}
+
+@media (max-width: 600px) {
+  .book-form {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+.form-message {
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.form-message.exito {
+  color: #176b3a;
+  background: #e3f5e9;
+  border: 1px solid #a8dfb8;
+}
+
+.form-message.error {
+  color: #a32222;
+  background: #fde8e8;
+  border: 1px solid #efb2b2;
+}
